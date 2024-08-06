@@ -1,10 +1,12 @@
 package com.devspace.recyclerview
 
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -20,53 +22,62 @@ class MainActivity : AppCompatActivity() {
         }
 
         val rvList = findViewById<RecyclerView>(R.id.rv_list)
+        val ivList = findViewById<ImageView>(R.id.iv_list)
+        val ivGrid = findViewById<ImageView>(R.id.iv_grid)
         val adapter = ContactListAdapter()
 
         rvList.adapter = adapter
         rvList.layoutManager = LinearLayoutManager(this)
         adapter.submitList(contacts)
+        //muda orientação tela
+        ivGrid.setOnClickListener{
+            rvList.layoutManager = GridLayoutManager(this, 2)
+        }
+        //volta para orientação padrao
+        ivList.setOnClickListener{
+            rvList.layoutManager = LinearLayoutManager(this)
+        }
 
+        adapter.setOnClickListener { contact ->
+
+        }
     }
+
+
 }
 
 val contacts = listOf(
 
-
     Contact(
-        "Gabriel",
+        "Fernanda",
         "(51) 61 996479834",
         "Canoas - RS",
         R.drawable.sample1
     ),
-
     Contact(
         "Joaquin",
         "(51) 11 917479831",
         "São Paulo - SP",
         R.drawable.sample2
     ),
-
     Contact(
         "Maria",
         "(51) 51 937379833",
         "Esteio - RS",
         R.drawable.sample3
     ),
-
     Contact(
         "Regina",
         "(51) 31 947479434",
         "Patos de Minas",
         R.drawable.sample4
     ),
-
     Contact(
         "Simone",
         "(51) 32 987479834",
         "Contagem - MG",
         R.drawable.sample5
     ),
-
     Contact(
         "Isabel",
         "(51) 34 998489834",
@@ -110,7 +121,7 @@ val contacts = listOf(
         R.drawable.sample12
     ),
     Contact(
-        "João",
+        "Joana",
         "(31) 41 927472832",
         "Pouso Alegre - MG",
         R.drawable.sample13
@@ -133,5 +144,4 @@ val contacts = listOf(
         "Fortaleza - CE",
         R.drawable.sample16
     ),
-
 )
