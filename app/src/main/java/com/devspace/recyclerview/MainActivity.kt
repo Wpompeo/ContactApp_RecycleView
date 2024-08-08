@@ -1,5 +1,6 @@
 package com.devspace.recyclerview
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
@@ -37,8 +38,14 @@ class MainActivity : AppCompatActivity() {
         ivList.setOnClickListener{
             rvList.layoutManager = LinearLayoutManager(this)
         }
-
+        //acesso proxima tela
         adapter.setOnClickListener { contact ->
+            val intent = Intent (this, ContactDetailActivity::class.java)
+            intent.putExtra("name", contact.name)
+            intent.putExtra("phone", contact.phone)
+            intent.putExtra("city", contact.city)
+            intent.putExtra("icon", contact.icon)
+            startActivity(intent)
 
         }
     }
@@ -50,55 +57,55 @@ val contacts = listOf(
 
     Contact(
         "Fernanda",
-        "(51) 61 996479834",
+        "(55) 61 996479834",
         "Canoas - RS",
         R.drawable.sample1
     ),
     Contact(
         "Joaquin",
-        "(51) 11 917479831",
+        "(55) 11 917479831",
         "São Paulo - SP",
         R.drawable.sample2
     ),
     Contact(
         "Maria",
-        "(51) 51 937379833",
+        "(55) 51 937379833",
         "Esteio - RS",
         R.drawable.sample3
     ),
     Contact(
         "Regina",
-        "(51) 31 947479434",
-        "Patos de Minas",
+        "(55) 31 947479434",
+        "Patos de Minas - MG",
         R.drawable.sample4
     ),
     Contact(
         "Simone",
-        "(51) 32 987479834",
+        "(55) 32 987479834",
         "Contagem - MG",
         R.drawable.sample5
     ),
     Contact(
         "Isabel",
-        "(51) 34 998489834",
+        "(55) 34 998489834",
         "Betim - MG",
         R.drawable.sample6
     ),
     Contact(
         "Joana",
-        "(51) 47 911479811",
+        "(55) 47 911479811",
         "Florianópolis - SC",
         R.drawable.sample7
     ),
     Contact(
         "Vinicius",
-        "(54) 21 922479824",
+        "(55) 21 922479824",
         "Rio de Janeiro - RJ",
         R.drawable.sample8
     ),
     Contact(
         "Anderson",
-        "(51) 27 815479834",
+        "(55) 27 815479834",
         "Vitória - ES",
         R.drawable.sample9
     ),
@@ -122,13 +129,13 @@ val contacts = listOf(
     ),
     Contact(
         "Joana",
-        "(31) 41 927472832",
+        "(55) 41 927472832",
         "Pouso Alegre - MG",
         R.drawable.sample13
     ),
     Contact(
         "Miguel",
-        "(51) 51 987479834",
+        "(55) 51 987479834",
         "Porto Alegre - RS",
         R.drawable.sample14
     ),

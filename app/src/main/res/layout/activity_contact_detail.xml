@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/LightGrey"
+    android:background="#F0FFF0"
     tools:context=".ContactDetailActivity">
 
     <TextView
@@ -16,9 +16,12 @@
         android:textColor="@color/black"
         android:textSize="38sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.06" />
 
     <ImageView
         android:id="@+id/image"
@@ -109,7 +112,8 @@
         android:layout_margin="8dp"
         android:padding="8dp"
         android:text="Send Message"
-        android:textColor="@color/Blue"
+        android:textStyle="italic"
+        android:textColor="@color/DarkGreen"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@id/vertical_guideline"
         app:layout_constraintStart_toStartOf="parent"
@@ -119,6 +123,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:src="@drawable/message_contact"
+        app:tint="@color/DarkGreen"
         android:layout_marginEnd="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/tv_send_message"
         app:layout_constraintEnd_toEndOf="parent"
@@ -132,6 +137,7 @@
         android:layout_margin="8dp"
         android:padding="8dp"
         android:text="Share contact"
+        android:textStyle="italic"
         android:textColor="#0000FF"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@id/vertical_guideline"
@@ -142,6 +148,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:src="@drawable/share_contact"
+        app:tint="@color/Blue"
         android:layout_marginEnd="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/tv_share_contact"
         app:layout_constraintEnd_toEndOf="parent"
@@ -154,6 +161,7 @@
         android:layout_margin="8dp"
         android:padding="8dp"
         android:text="Block contact"
+        android:textStyle="bold"
         android:textColor="@color/Red"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@id/vertical_guideline"
@@ -165,6 +173,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/block_contact"
         android:layout_marginEnd="16dp"
+        app:tint="@color/Red"
         app:layout_constraintBottom_toBottomOf="@+id/tv_block_contact"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tv_block_contact" />
