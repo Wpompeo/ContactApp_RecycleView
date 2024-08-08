@@ -17,6 +17,7 @@ Esse aplicativo foi desenvolvido para praticar desenvolvimento de listas em dese
 - Layout Manager: Grid and Linear
 - DiffUtils
 - Explicit intent
+- data class
 
 ## License
 
