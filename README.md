@@ -1,5 +1,5 @@
 ## Sobre
-Esse aplicativo foi desenvolvido para praticar desenvolvimento de listas em desenvolvimento Kotlin Android com recyclerview.
+Esse aplicativo foi criado para praticar o desenvolvimento de listas em Kotlin Android com Recyclerview.
 
 ## Screenshots
 <img src = "https://github.com/user-attachments/assets/45bc6032-e0e5-4816-a1d3-d038d1f5451c" width="260"/>
